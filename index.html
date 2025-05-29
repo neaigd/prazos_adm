@@ -1,0 +1,721 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Impacto da Comunicação e Prazos no Processo Administrativo</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        .chart-container {
+            position: relative;
+            width: 100%;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+            height: 300px;
+            max-height: 350px;
+        }
+        @media (min-width: 768px) {
+            .chart-container {
+                height: 350px;
+                max-height: 400px;
+            }
+        }
+        .content-section {
+            padding-top: 4rem; /* Offset for fixed navbar */
+        }
+        .table-container {
+            overflow-x: auto;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th, td {
+            border: 1px solid #e5e7eb; /* stone-200 */
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #f3f4f6; /* stone-100 */
+        }
+        .citation {
+            font-size: 0.75rem;
+            color: #0ea5e9; /* sky-500 */
+            cursor: help;
+        }
+         .nav-link {
+            @apply px-3 py-2 rounded-md text-sm font-medium text-stone-700 hover:bg-sky-100 hover:text-sky-700;
+        }
+        .nav-link.active {
+            @apply bg-sky-600 text-white hover:bg-sky-700;
+        }
+        .tab-button {
+            @apply px-4 py-2 font-medium text-sm rounded-t-lg focus:outline-none;
+        }
+        .tab-button.active {
+            @apply bg-sky-600 text-white;
+        }
+        .tab-button:not(.active) {
+            @apply text-sky-600 hover:bg-sky-100;
+        }
+        .tab-content {
+            @apply p-4 border border-t-0 rounded-b-lg border-stone-300;
+        }
+    </style>
+</head>
+<body class="bg-stone-50 text-stone-800">
+
+    <nav id="mainNav" class="bg-stone-100/80 backdrop-blur-md shadow-md fixed w-full z-50 top-0">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <div class="flex items-center">
+                    <span class="font-bold text-sky-700 text-lg">Análise Processual</span>
+                </div>
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-4">
+                        <a href="#introducao" class="nav-link">Introdução</a>
+                        <a href="#principios" class="nav-link">Princípios</a>
+                        <a href="#comunicacao" class="nav-link">Comunicação</a>
+                        <a href="#prazos" class="nav-link">Prazos</a>
+                        <a href="#jurisprudencia" class="nav-link">Jurisprudência</a>
+                        <a href="#doutrina" class="nav-link">Doutrina</a>
+                        <a href="#tendencias" class="nav-link">Tendências</a>
+                        <a href="#conclusao" class="nav-link">Conclusão</a>
+                    </div>
+                </div>
+                <div class="md:hidden">
+                    <button id="mobileMenuButton" class="text-stone-700 hover:text-sky-700 focus:outline-none">
+                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div id="mobileMenu" class="md:hidden hidden">
+            <a href="#introducao" class="block nav-link text-base">Introdução</a>
+            <a href="#principios" class="block nav-link text-base">Princípios</a>
+            <a href="#comunicacao" class="block nav-link text-base">Comunicação</a>
+            <a href="#prazos" class="block nav-link text-base">Prazos</a>
+            <a href="#jurisprudencia" class="block nav-link text-base">Jurisprudência</a>
+            <a href="#doutrina" class="block nav-link text-base">Doutrina</a>
+            <a href="#tendencias" class="block nav-link text-base">Tendências</a>
+            <a href="#conclusao" class="block nav-link text-base">Conclusão</a>
+        </div>
+    </nav>
+
+    <main class="container mx-auto px-4 sm:px-6 lg:px-8 pt-20">
+
+        <section id="introducao" class="content-section py-12">
+            <h1 class="text-3xl sm:text-4xl font-bold text-sky-700 mb-6">O Impacto da Correta Comunicação dos Atos e da Observância dos Prazos no Exercício do Contraditório e da Ampla Defesa no Processo Administrativo <span class="citation" title="Fonte: 1">[cite: 1]</span></h1>
+            <p class="text-lg text-stone-700 mb-4">Esta aplicação interativa explora a importância crucial da comunicação adequada dos atos processuais e do respeito aos prazos para a efetivação das garantias constitucionais do contraditório e da ampla defesa no processo administrativo brasileiro. O objetivo é apresentar de forma clara e acessível os principais conceitos, fundamentos legais, análises jurisprudenciais e doutrinárias, bem como as tendências e desafios relacionados ao tema.</p>
+            <p class="text-stone-600 mb-4">A comunicação dos atos e a temporalidade processual não são meras formalidades, mas elementos instrumentais que viabilizam direitos fundamentais do administrado. <span class="citation" title="Fonte: 2">[cite: 2]</span> Falhas nesses componentes podem comprometer a validade dos atos e a justiça das decisões. <span class="citation" title="Fonte: 3">[cite: 3]</span> Navegue pelas seções para aprofundar seu conhecimento sobre este tema vital para o Estado de Direito.</p>
+
+            <div class="mt-8 p-6 bg-white shadow-lg rounded-lg border border-sky-200">
+                <h2 class="text-2xl font-semibold text-sky-600 mb-3">Relevância e Objetivos</h2>
+                <p class="text-stone-600 mb-2">A relevância do tema é inquestionável, ligada aos direitos fundamentais do devido processo legal, contraditório e ampla defesa (CF/88, art. 5º, LIV e LV). <span class="citation" title="Fonte: 11, 12">[cite: 11, 12]</span> Falhas geram insegurança jurídica, retrabalho administrativo e judicialização. <span class="citation" title="Fonte: 13, 14">[cite: 13, 14]</span></p>
+                <p class="text-stone-600 font-medium mb-2">Os objetivos desta análise incluem:</p>
+                <ul class="list-disc list-inside text-stone-600 space-y-1">
+                    <li>Analisar jurisprudência e doutrina sobre o tema. <span class="citation" title="Fonte: 17, 18">[cite: 17, 18]</span></li>
+                    <li>Identificar a evolução e possíveis divergências de entendimentos. <span class="citation" title="Fonte: 20, 21">[cite: 20, 21]</span></li>
+                    <li>Sintetizar os principais argumentos e teses. <span class="citation" title="Fonte: 22, 23">[cite: 22, 23]</span></li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="principios" class="content-section py-12">
+            <h2 class="text-2xl sm:text-3xl font-bold text-sky-700 mb-6">Princípios Fundamentais</h2>
+            <p class="text-lg text-stone-700 mb-6">Esta seção explora os alicerces constitucionais e legais que sustentam o contraditório e a ampla defesa no processo administrativo. Compreender esses princípios é essencial para entender a importância da comunicação e dos prazos. A Lei nº 9.784/99 desempenha um papel central na instrumentalização dessas garantias na esfera federal. <span class="citation" title="Fonte: 31, 32">[cite: 31, 32]</span></p>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="bg-white p-6 rounded-lg shadow-md border border-stone-200 hover:shadow-xl transition-shadow">
+                    <h3 class="text-xl font-semibold text-sky-600 mb-2">Devido Processo Legal Administrativo</h3>
+                    <p class="text-sm text-stone-600 mb-2">(Art. 5º, LIV, CF/88) <span class="citation" title="Fonte: 33">[cite: 33]</span></p>
+                    <p class="text-stone-600 text-sm">"Ninguém será privado da liberdade ou de seus bens sem o devido processo legal." <span class="citation" title="Fonte: 34">[cite: 34]</span> É a viga mestra das garantias processuais, exigindo que a Administração observe regras e procedimentos preestabelecidos, assegurando um processo justo e equitativo. <span class="citation" title="Fonte: 34, 35">[cite: 34, 35]</span> Impõe o dever de seguir um rito que garanta participação e racionalidade. <span class="citation" title="Fonte: 36">[cite: 36]</span></p>
+                </div>
+
+                <div class="bg-white p-6 rounded-lg shadow-md border border-stone-200 hover:shadow-xl transition-shadow">
+                    <h3 class="text-xl font-semibold text-sky-600 mb-2">Contraditório e Ampla Defesa</h3>
+                    <p class="text-sm text-stone-600 mb-2">(Art. 5º, LV, CF/88) <span class="citation" title="Fonte: 37">[cite: 37]</span></p>
+                    <p class="text-stone-600 text-sm mb-1">"Aos litigantes (...) e aos acusados em geral são assegurados o contraditório e ampla defesa, com os meios e recursos a ela inerentes." <span class="citation" title="Fonte: 38">[cite: 38]</span></p>
+                    <p class="text-stone-600 text-sm mb-1"><strong>Contraditório:</strong> Direito de ciência bilateral dos atos e possibilidade de contrariá-los (direito à informação e reação). <span class="citation" title="Fonte: 40">[cite: 40]</span></p>
+                    <p class="text-stone-600 text-sm"><strong>Ampla Defesa:</strong> Direito de usar todos os meios legais para defender interesses (provas, requerimentos, recursos). <span class="citation" title="Fonte: 41">[cite: 41]</span></p>
+                     <p class="text-xs text-stone-500 mt-2">A Súmula Vinculante nº 5 do STF modula a necessidade de advogado no PAD. <span class="citation" title="Fonte: 42">[cite: 42]</span></p>
+                </div>
+
+                <div class="bg-white p-6 rounded-lg shadow-md border border-stone-200 hover:shadow-xl transition-shadow">
+                    <h3 class="text-xl font-semibold text-sky-600 mb-2">Lei nº 9.784/99</h3>
+                    <p class="text-stone-600 text-sm">Estabelece normas básicas sobre o processo administrativo federal, visando proteger direitos dos administrados e o cumprimento dos fins da Administração. <span class="citation" title="Fonte: 43">[cite: 43]</span> Seus dispositivos sobre comunicação (arts. 26-28) e prazos (arts. 24, 25, etc.) são cruciais. <span class="citation" title="Fonte: 44">[cite: 44]</span></p>
+                    <p class="text-stone-600 text-sm mt-2">Atua de forma instrumental e supletiva (art. 69), detalhando procedimentos para concretizar garantias constitucionais. <span class="citation" title="Fonte: 45, 46, 51">[cite: 45, 46, 51]</span></p>
+                </div>
+            </div>
+        </section>
+
+        <section id="comunicacao" class="content-section py-12">
+            <h2 class="text-2xl sm:text-3xl font-bold text-sky-700 mb-6">A Correta Comunicação dos Atos Processuais</h2>
+            <p class="text-lg text-stone-700 mb-6">A comunicação dos atos é o pilar que sustenta o exercício da defesa. <span class="citation" title="Fonte: 53">[cite: 53]</span> Uma falha neste processo pode invalidar todo o procedimento. <span class="citation" title="Fonte: 54">[cite: 54]</span> Esta seção detalha as modalidades de comunicação, seus requisitos de validade, as consequências de falhas e debate questões controversas como a intimação por edital e a comunicação eletrônica.</p>
+
+            <div id="comunicacaoTabsContainer">
+                <div class="mb-4 border-b border-stone-300">
+                    <nav class="flex space-x-1" aria-label="Tabs">
+                        <button data-tab="comunicacao-modalidades" class="tab-button active">Modalidades</button>
+                        <button data-tab="comunicacao-requisitos" class="tab-button">Requisitos</button>
+                        <button data-tab="comunicacao-consequencias" class="tab-button">Consequências</button>
+                        <button data-tab="comunicacao-controvertidas" class="tab-button">Questões Controvertidas</button>
+                    </nav>
+                </div>
+
+                <div id="comunicacao-modalidades" class="tab-content">
+                    <h3 class="text-xl font-semibold text-sky-600 mb-3">Modalidades de Comunicação <span class="citation" title="Fonte: 55">[cite: 55]</span></h3>
+                    <div class="grid md:grid-cols-3 gap-4">
+                        <div class="p-4 bg-sky-50 rounded-lg border border-sky-200">
+                            <h4 class="font-semibold text-sky-700">Notificação</h4>
+                            <p class="text-sm text-stone-600">Ciência sobre instauração de processo, fatos relevantes ou necessidade de providências (e.g., apresentar documentos). <span class="citation" title="Fonte: 55, 56">[cite: 55, 56]</span> Ex: Notificação prévia em desapropriação (STF MS 25.793/DF <span class="citation" title="Fonte: 57">[cite: 57]</span>).</p>
+                        </div>
+                        <div class="p-4 bg-sky-50 rounded-lg border border-sky-200">
+                            <h4 class="font-semibold text-sky-700">Intimação</h4>
+                            <p class="text-sm text-stone-600">Ciência de atos, termos ou decisões para que o interessado faça ou deixe de fazer algo (Art. 26, Lei 9.784/99 <span class="citation" title="Fonte: 58">[cite: 58]</span>). Ex: Convocação para audiência, apresentação de defesa. <span class="citation" title="Fonte: 58, 59">[cite: 58, 59]</span></p>
+                        </div>
+                        <div class="p-4 bg-sky-50 rounded-lg border border-sky-200">
+                            <h4 class="font-semibold text-sky-700">Citação (no PAD)</h4>
+                            <p class="text-sm text-stone-600">Ato formal que cientifica o servidor da acusação e o convoca para apresentar defesa escrita no Processo Administrativo Disciplinar. <span class="citation" title="Fonte: 60">[cite: 60]</span> Marca o início da fase contraditória. <span class="citation" title="Fonte: 60">[cite: 60]</span></p>
+                        </div>
+                    </div>
+                    <p class="text-sm text-stone-600 mt-3">O fundamental é que a comunicação cumpra sua finalidade: informar clara e inequivocamente para o exercício da defesa. <span class="citation" title="Fonte: 62">[cite: 62]</span></p>
+                </div>
+
+                <div id="comunicacao-requisitos" class="tab-content hidden">
+                    <h3 class="text-xl font-semibold text-sky-600 mb-3">Requisitos de Validade da Comunicação <span class="citation" title="Fonte: 63">[cite: 63]</span></h3>
+                    <ul class="list-disc list-inside space-y-2 text-stone-600">
+                        <li><strong>Forma:</strong> Ciência nos autos, via postal com AR, telegrama, ou outro meio seguro (Art. 26, §3º, Lei 9.784/99 <span class="citation" title="Fonte: 64">[cite: 64]</span>). Edital é excepcional (§4º <span class="citation" title="Fonte: 65">[cite: 65]</span>). E-mail/celular com confirmação são admitidos (Manual PAD CGU <span class="citation" title="Fonte: 66">[cite: 66]</span>).</li>
+                        <li><strong>Conteúdo:</strong> Claro e completo (identificação, finalidade, data/hora/local, fatos e fundamentos legais - Art. 26, §1º, Lei 9.784/99 <span class="citation" title="Fonte: 67">[cite: 67]</span>).</li>
+                        <li><strong>Tempestividade:</strong> Antecedência mínima de 3 dias úteis para comparecimento (Art. 26, §2º, Lei 9.784/99 <span class="citation" title="Fonte: 68, 69">[cite: 68, 69]</span>). Prazos exíguos podem cercear defesa. <span class="citation" title="Fonte: 69">[cite: 69]</span></li>
+                        <li><strong>Destinatário:</strong> Interessado, representante legal ou procurador com poderes. <span class="citation" title="Fonte: 70">[cite: 70]</span> Comunicação a terceiros é inválida (STF MS 25.793/DF <span class="citation" title="Fonte: 71">[cite: 71]</span>).</li>
+                    </ul>
+                </div>
+
+                <div id="comunicacao-consequencias" class="tab-content hidden">
+                    <h3 class="text-xl font-semibold text-sky-600 mb-3">Consequências da Comunicação Defeituosa</h3>
+                    <p class="text-stone-600 mb-2">Principal causa de nulidade, pois impede ou dificulta o contraditório e ampla defesa (cerceamento de defesa). <span class="citation" title="Fonte: 72">[cite: 72]</span></p>
+                    <p class="text-stone-600 mb-1"><strong>Nulidade Absoluta:</strong> Violação direta a princípio constitucional, insanável. <span class="citation" title="Fonte: 73">[cite: 73]</span> Ex: Ausência total de intimação crucial. <span class="citation" title="Fonte: 74">[cite: 74]</span></p>
+                    <p class="text-stone-600 mb-4"><strong>Nulidade Relativa:</strong> Vício não impede finalidade do ato ou não causa prejuízo; pode ser convalidada. <span class="citation" title="Fonte: 75, 76">[cite: 75, 76]</span></p>
+                    <div class="p-4 bg-amber-50 border-l-4 border-amber-500 text-amber-700">
+                        <p class="font-semibold">Importante: Princípios Mitigadores</p>
+                        <ul class="list-disc list-inside text-sm">
+                            <li><strong>Pas de nullité sans grief:</strong> Não há nulidade sem prejuízo. Exige-se demonstração de dano concreto. <span class="citation" title="Fonte: 77, 78">[cite: 77, 78]</span></li>
+                            <li><strong>Rejeição à "Nulidade de Algibeira":</strong> Coíbe má-fé da parte que não alega vício conhecido oportunamente. <span class="citation" title="Fonte: 80, 81, 82">[cite: 80, 81, 82]</span></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div id="comunicacao-controvertidas" class="tab-content hidden">
+                    <h3 class="text-xl font-semibold text-sky-600 mb-3">Questões Controvertidas</h3>
+                    <div class="space-y-4">
+                        <div>
+                            <h4 class="font-semibold text-sky-700">Intimação por Edital</h4>
+                            <p class="text-sm text-stone-600">Excepcional (Art. 26, §4º, Lei 9.784/99 <span class="citation" title="Fonte: 83">[cite: 83]</span>), cabível após esgotamento de outros meios. <span class="citation" title="Fonte: 83, 84">[cite: 83, 84]</span> Divergências: STJ admitiu em demarcação (REsp 2036429/MA <span class="citation" title="Fonte: 84">[cite: 84]</span>), TRF5 anulou em casos fiscais por falta de esgotamento de meios. <span class="citation" title="Fonte: 84">[cite: 84]</span></p>
+                        </div>
+                        <div>
+                            <h4 class="font-semibold text-sky-700">Ciência Inequívoca</h4>
+                            <p class="text-sm text-stone-600">Pode suprir vícios formais se a parte demonstra conhecimento do ato/processo. <span class="citation" title="Fonte: 85">[cite: 85]</span> Atinge a finalidade da comunicação. Contudo, a caracterização deve ser robusta. <span class="citation" title="Fonte: 86">[cite: 86]</span> O resultado (ciência efetiva) pode prevalecer sobre a forma, mas há risco de subjetividade. <span class="citation" title="Fonte: 90, 91">[cite: 90, 91]</span></p>
+                        </div>
+                        <div>
+                            <h4 class="font-semibold text-sky-700">Comunicação Eletrônica</h4>
+                            <p class="text-sm text-stone-600 mb-1">Vantagens: celeridade, economia. <span class="citation" title="Fonte: 94">[cite: 94]</span> Desafios: exclusão digital <span class="citation" title="Fonte: 96">[cite: 96]</span>, segurança, validade jurídica, definição de ciência efetiva. <span class="citation" title="Fonte: 96">[cite: 96]</span> Risco de "cerceamento digital" se não implementada com cautela. <span class="citation" title="Fonte: 98, 101">[cite: 98, 101]</span> PL 2.481/2022 aborda o tema. <span class="citation" title="Fonte: 95">[cite: 95]</span></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="prazos" class="content-section py-12">
+            <h2 class="text-2xl sm:text-3xl font-bold text-sky-700 mb-6">A Observância dos Prazos Processuais</h2>
+            <p class="text-lg text-stone-700 mb-6">A dimensão temporal é crucial no processo administrativo. Os prazos ordenam o fluxo, asseguram celeridade e, fundamentalmente, garantem tempo para a defesa. <span class="citation" title="Fonte: 104, 105">[cite: 104, 105]</span> Esta seção discute a natureza dos prazos, seu impacto quando não observados e a questão dos prazos exíguos.</p>
+
+            <div id="prazosTabsContainer">
+                <div class="mb-4 border-b border-stone-300">
+                    <nav class="flex space-x-1" aria-label="Tabs">
+                        <button data-tab="prazos-natureza" class="tab-button active">Natureza e Contagem</button>
+                        <button data-tab="prazos-inobservancia" class="tab-button">Impacto da Inobservância</button>
+                        <button data-tab="prazos-exiguos" class="tab-button">Prazos Exíguos</button>
+                    </nav>
+                </div>
+
+                <div id="prazos-natureza" class="tab-content">
+                    <h3 class="text-xl font-semibold text-sky-600 mb-3">Natureza Jurídica, Contagem e Relevância</h3>
+                    <p class="text-stone-600 mb-2">Prazos têm dupla função: garantia para o administrado e organização/celeridade para a Administração. <span class="citation" title="Fonte: 106">[cite: 106]</span></p>
+                    <ul class="list-disc list-inside space-y-1 text-stone-600 mb-3">
+                        <li><strong>Prazos Próprios:</strong> Descumprimento gera consequências (e.g., preclusão). Geralmente para as partes. <span class="citation" title="Fonte: 107, 108">[cite: 107, 108]</span></li>
+                        <li><strong>Prazos Impróprios:</strong> Dirigidos à Administração. Descumprimento pode gerar responsabilização, mas nem sempre invalida o ato. <span class="citation" title="Fonte: 109">[cite: 109]</span></li>
+                    </ul>
+                    <p class="text-stone-600 mb-1"><strong>Contagem (Lei 9.784/99, art. 66 <span class="citation" title="Fonte: 111">[cite: 111]</span>):</strong></p>
+                    <ul class="list-disc list-inside space-y-1 text-stone-600 text-sm">
+                        <li>Início: Data da cientificação oficial. <span class="citation" title="Fonte: 111">[cite: 111]</span></li>
+                        <li>Exclui-se o dia do começo, inclui-se o do vencimento. <span class="citation" title="Fonte: 111">[cite: 111]</span></li>
+                        <li>Vencimento em dia não útil: prorroga-se para o próximo dia útil. <span class="citation" title="Fonte: 112">[cite: 112]</span></li>
+                        <li>Não se suspendem, salvo força maior. <span class="citation" title="Fonte: 113">[cite: 113]</span> (PL 2.481/2022 propõe contagem em dias úteis e suspensão <span class="citation" title="Fonte: 113">[cite: 113]</span>).</li>
+                    </ul>
+                </div>
+
+                <div id="prazos-inobservancia" class="tab-content hidden">
+                    <h3 class="text-xl font-semibold text-sky-600 mb-3">Impacto da Inobservância dos Prazos <span class="citation" title="Fonte: 115">[cite: 115]</span></h3>
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <div>
+                            <h4 class="font-semibold text-sky-700">Pela Administração:</h4>
+                            <ul class="list-disc list-inside text-sm text-stone-600 space-y-1">
+                                <li>Atraso injustificado ("embargo de gaveta"): violação ao direito à decisão em prazo razoável (art. 5º, LXXVIII, CF/88). <span class="citation" title="Fonte: 116">[cite: 116]</span></li>
+                                <li>Lei 9.784/99 (arts. 48, 49): dever de decidir em até 30 dias (prorrogável). <span class="citation" title="Fonte: 116">[cite: 116]</span></li>
+                                <li>Silêncio administrativo: regra é decisão expressa, mas pode haver deferimento/indeferimento tácito se previsto em lei. <span class="citation" title="Fonte: 117">[cite: 117]</span></li>
+                                <li>Prazos decadenciais para anular atos favoráveis (Lei 9.784/99, art. 54: 5 anos, salvo má-fé). <span class="citation" title="Fonte: 118">[cite: 118]</span></li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h4 class="font-semibold text-sky-700">Pelo Administrado:</h4>
+                            <ul class="list-disc list-inside text-sm text-stone-600 space-y-1">
+                                <li>Regra: preclusão temporal (perda do direito de praticar o ato). <span class="citation" title="Fonte: 119">[cite: 119]</span></li>
+                                <li><strong>Mitigação (Lei 9.784/99, art. 27 <span class="citation" title="Fonte: 121">[cite: 121]</span>):</strong> Não atendimento da intimação não importa reconhecimento da verdade dos fatos nem renúncia a direito. <span class="citation" title="Fonte: 121">[cite: 121]</span> Garante-se ampla defesa no prosseguimento. <span class="citation" title="Fonte: 121">[cite: 121]</span> Pode apresentar documentos/alegações antes da decisão final. <span class="citation" title="Fonte: 122">[cite: 122]</span></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <p class="text-sm text-stone-500 mt-3">A preclusão é mais flexível para o administrado, visando proteger a ampla defesa e a busca pela verdade material. <span class="citation" title="Fonte: 123, 124, 125, 126">[cite: 123, 124, 125, 126]</span> Já para a Administração, prazos como o decadencial do art. 54 são mais estritos para garantir segurança jurídica. <span class="citation" title="Fonte: 126, 127">[cite: 126, 127]</span></p>
+                </div>
+
+                <div id="prazos-exiguos" class="tab-content hidden">
+                    <h3 class="text-xl font-semibold text-sky-600 mb-3">Prazos Exíguos e a Garantia de uma Defesa Efetiva</h3>
+                    <p class="text-stone-600 mb-2">A simples existência de prazo não basta; ele deve ser <strong>razoável</strong> e <strong>suficiente</strong> para preparar a defesa. <span class="citation" title="Fonte: 131, 132">[cite: 131, 132]</span> Prazos curtos demais configuram cerceamento de defesa. <span class="citation" title="Fonte: 133">[cite: 133]</span></p>
+                    <p class="text-stone-600 mb-2">Ex: STJ (RMS 42.193-ES) anulou intimação para interrogatório com 2 dias de antecedência (lei exige 3 dias úteis). Prejuízo presumido. <span class="citation" title="Fonte: 134, 135, 136">[cite: 134, 135, 136]</span></p>
+                    <p class="text-stone-600">Aferição da razoabilidade é casuística: depende da complexidade, volume de informações, necessidade de assistência técnica. <span class="citation" title="Fonte: 136">[cite: 136]</span> "Prazo razoável" é um conceito jurídico indeterminado, fonte potencial de litígios. <span class="citation" title="Fonte: 137, 138">[cite: 137, 138]</span> Fatores como complexidade da matéria e condições do administrado influenciam essa percepção. <span class="citation" title="Fonte: 141">[cite: 141]</span></p>
+                </div>
+            </div>
+        </section>
+
+        <section id="jurisprudencia" class="content-section py-12">
+            <h2 class="text-2xl sm:text-3xl font-bold text-sky-700 mb-6">Análise Jurisprudencial</h2>
+            <p class="text-lg text-stone-700 mb-6">Esta seção mergulha nas decisões dos tribunais superiores (STF, STJ) e Tribunais Regionais Federais (TRFs) sobre comunicação e prazos. O objetivo é identificar entendimentos consolidados, divergências e a evolução da interpretação judicial, com destaque para princípios como <em>pas de nullité sans grief</em> e a rejeição às "nulidades de algibeira". <span class="citation" title="Fonte: 145, 146">[cite: 145, 146]</span></p>
+
+            <div class="mb-4">
+                <label for="tribunalFilter" class="block text-sm font-medium text-stone-700 mb-1">Filtrar por Tribunal:</label>
+                <select id="tribunalFilter" class="block w-full md:w-1/3 p-2 border border-stone-300 rounded-md shadow-sm focus:ring-sky-500 focus:border-sky-500">
+                    <option value="todos">Todos</option>
+                    <option value="stf">STF</option>
+                    <option value="stj">STJ</option>
+                    <option value="trfs">TRFs</option>
+                </select>
+            </div>
+
+            <div id="jurisprudenciaItens">
+                <div class="jurisprudencia-item bg-white p-4 rounded-lg shadow mb-4 border border-stone-200" data-tribunal="stf">
+                    <h4 class="font-semibold text-sky-600">STF - MS 25.793/DF</h4>
+                    <p class="text-sm text-stone-600">Anulou decreto expropriatório por ausência de notificação prévia válida ao proprietário. Violação do devido processo legal, contraditório e ampla defesa. Notificação deve ser pessoal ou a representante legítimo. <span class="citation" title="Fonte: 148, 149">[cite: 148, 149]</span></p>
+                </div>
+                <div class="jurisprudencia-item bg-white p-4 rounded-lg shadow mb-4 border border-stone-200" data-tribunal="stj">
+                    <h4 class="font-semibold text-sky-600">STJ - RMS 42.193-ES</h4>
+                    <p class="text-sm text-stone-600">Anulou PAD por intimação para interrogatório com apenas 2 dias de antecedência (lei exige 3 dias úteis). Prejuízo à defesa presumido. <span class="citation" title="Fonte: 156, 157">[cite: 156, 157]</span></p>
+                </div>
+                 <div class="jurisprudencia-item bg-white p-4 rounded-lg shadow mb-4 border border-stone-200" data-tribunal="stj">
+                    <h4 class="font-semibold text-sky-600">STJ - "Nulidades de Algibeira"</h4>
+                    <p class="text-sm text-stone-600">Rechaça a prática da parte que, ciente de vício, não o alega na primeira oportunidade, guardando-o para momento conveniente. Contrário à boa-fé processual (e.g., REsp 756.885). <span class="citation" title="Fonte: 158, 159">[cite: 158, 159]</span></p>
+                </div>
+                <div class="jurisprudencia-item bg-white p-4 rounded-lg shadow mb-4 border border-stone-200" data-tribunal="stj">
+                    <h4 class="font-semibold text-sky-600">STJ - REsp 2.036.429-MA</h4>
+                    <p class="text-sm text-stone-600">Considerou válida intimação por edital em fase inaugural de demarcação de terrenos de marinha (equiparada a consulta pública), desde que garantida impugnação posterior com contraditório e ampla defesa. <span class="citation" title="Fonte: 163">[cite: 163]</span></p>
+                </div>
+                 <div class="jurisprudencia-item bg-white p-4 rounded-lg shadow mb-4 border border-stone-200" data-tribunal="trfs">
+                    <h4 class="font-semibold text-sky-600">TRF5 - PJE 08045728220154058400 e PJE 08008288220154058302</h4>
+                    <p class="text-sm text-stone-600">Reforçam excepcionalidade da intimação por edital em processos fiscais, anulando-a por não esgotamento dos meios de localização pessoal do devedor, configurando violação ao contraditório e à ampla defesa. <span class="citation" title="Fonte: 169, 170, 171">[cite: 169, 170, 171]</span></p>
+                </div>
+                 <div class="jurisprudencia-item bg-white p-4 rounded-lg shadow mb-4 border border-stone-200" data-tribunal="stf">
+                    <h4 class="font-semibold text-sky-600">STF - Súmula Vinculante nº 5</h4>
+                    <p class="text-sm text-stone-600">"A falta de defesa técnica por advogado no processo administrativo disciplinar não ofende a Constituição." Modulou a questão da assistência por advogado no PAD, ressalvando a necessidade de demonstração de prejuízo para anulação. <span class="citation" title="Fonte: 42, 179">[cite: 42, 179]</span></p>
+                </div>
+            </div>
+
+            <div class="mt-8 p-6 bg-white shadow-lg rounded-lg border border-sky-200">
+                <h3 class="text-xl font-semibold text-sky-600 mb-3">Princípio "Pas de Nullité Sans Grief" e "Nulidades de Algibeira"</h3>
+                <p class="text-stone-600 mb-2"><strong>Pas de nullité sans grief:</strong> Não se declara nulidade sem demonstração de prejuízo concreto à parte ou à finalidade do processo. <span class="citation" title="Fonte: 183, 184">[cite: 183, 184]</span> Reflete visão instrumental do processo. <span class="citation" title="Fonte: 185">[cite: 185]</span></p>
+                <p class="text-stone-600 mb-2"><strong>Nulidades de Algibeira:</strong> Coíbe má-fé da parte que não alega vício oportunamente, guardando-o para momento estratégico. <span class="citation" title="Fonte: 188">[cite: 188]</span> STJ rechaça tal comportamento. <span class="citation" title="Fonte: 189">[cite: 189]</span></p>
+                 <p class="text-sm text-stone-500 mt-2"><strong>Nuance:</strong> STJ admite presunção de prejuízo em casos de inobservância de prazos mínimos legais para defesa (e.g., RMS 42.193-ES). <span class="citation" title="Fonte: 193, 194, 195">[cite: 193, 194, 195]</span></p>
+            </div>
+
+            <div class="mt-8 table-container">
+                <h3 class="text-xl font-semibold text-sky-600 mb-3">Tabela Comparativa de Entendimentos Jurisprudenciais <span class="citation" title="Fonte: 181">[cite: 181]</span></h3>
+                <table class="min-w-full divide-y divide-stone-200 text-sm">
+                    <thead class="bg-stone-100">
+                        <tr>
+                            <th class="px-4 py-2">Tema Controvertido</th>
+                            <th class="px-4 py-2">STF</th>
+                            <th class="px-4 py-2">STJ</th>
+                            <th class="px-4 py-2">TRFs (Exemplos)</th>
+                        </tr>
+                    </thead>
+                    <tbody class="bg-white divide-y divide-stone-200">
+                        <tr>
+                            <td class="px-4 py-2">Validade da Intimação por Edital</td>
+                            <td class="px-4 py-2">Excepcional, requer esgotamento de meios (MS 25.793/DF <span class="citation" title="Fonte: 13">[cite: 13]</span>). Ciência ficta via Diário Oficial pressupõe conhecimento (MS SJUR232899 <span class="citation" title="Fonte: 30">[cite: 30]</span>).</td>
+                            <td class="px-4 py-2">Pode ser válida em fases inaugurais de atos de grande alcance se garantida defesa posterior (REsp 2.036.429-MA <span class="citation" title="Fonte: 24">[cite: 24]</span>). Requer demonstração de prejuízo em alguns contextos.</td>
+                            <td class="px-4 py-2">TRF5: Nulidade se não esgotados meios pessoais (PJE 08045728220154058400 <span class="citation" title="Fonte: 19">[cite: 19]</span>, PJE 08008288220154058302 <span class="citation" title="Fonte: 20">[cite: 20]</span>). TRF2: Admite se ciência inequívoca (Ag. Inst. 5006451-84.2025.4.02.0000/RJ <span class="citation" title="Fonte: 26">[cite: 26]</span>).</td>
+                        </tr>
+                        <tr>
+                            <td class="px-4 py-2">Necessidade de Advogado no PAD (antes da SV nº 5)</td>
+                            <td class="px-4 py-2">Entendimento que culminou na SV nº 5 (desnecessidade, salvo prejuízo).</td>
+                            <td class="px-4 py-2">Súmula 343 (obrigatoriedade), posteriormente superada pela SV nº 5 do STF.</td>
+                            <td class="px-4 py-2">Variavam, acompanhando STJ ou antecipando entendimento do STF.</td>
+                        </tr>
+                        <tr>
+                            <td class="px-4 py-2">Exigência de Prejuízo para Nulidade (pas de nullité sans grief)</td>
+                            <td class="px-4 py-2">Aplicação frequente, exigindo demonstração de prejuízo (DJE 28/09/2012 <span class="citation" title="Fonte: 1">[cite: 1]</span>).</td>
+                            <td class="px-4 py-2">Regra geral, amplamente aplicada <span class="citation" title="Fonte: 5">[cite: 5]</span>. Exceção: presunção de prejuízo em prazos legais mínimos desrespeitados (RMS 42.193-ES <span class="citation" title="Fonte: 3">[cite: 3]</span>).</td>
+                            <td class="px-4 py-2">Geralmente acompanham STJ, exigindo demonstração de prejuízo.</td>
+                        </tr>
+                        <tr>
+                            <td class="px-4 py-2">Clareza da Acusação Inicial no PAD</td>
+                            <td class="px-4 py-2">Devido processo legal exige conhecimento prévio da acusação (MS 25.793/DF <span class="citation" title="Fonte: 13">[cite: 13]</span> - contexto de desapropriação, mas princípio aplicável).</td>
+                            <td class="px-4 py-2">Acusação deve ser clara para permitir defesa.</td>
+                            <td class="px-4 py-2">TRF4: Ênfase na necessidade de portaria inaugural detalhar infrações (AI 5004778-51.2015.404.0000/RS, citado por Machado <span class="citation" title="Fonte: 11">[cite: 11]</span>).</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <section id="doutrina" class="content-section py-12">
+            <h2 class="text-2xl sm:text-3xl font-bold text-sky-700 mb-6">Perspectivas Doutrinárias Essenciais</h2>
+            <p class="text-lg text-stone-700 mb-6">A doutrina administrativista brasileira oferece análises críticas e propositivas sobre comunicação, prazos e sua relação com o contraditório e a ampla defesa. <span class="citation" title="Fonte: 200">[cite: 200]</span> Esta seção apresenta contribuições de autores renomados e sintetiza argumentos jurídicos sobre o tema, mostrando a convergência com a jurisprudência na rejeição ao formalismo excessivo. <span class="citation" title="Fonte: 218, 219">[cite: 218, 219]</span></p>
+
+            <div class="grid md:grid-cols-2 gap-6 mb-8">
+                <div class="doutrina-autor bg-white p-4 rounded-lg shadow border border-stone-200">
+                    <h4 class="font-semibold text-sky-600">Thiago Marrara <span class="citation" title="Fonte: 2">[cite: 2]</span></h4>
+                    <p class="text-sm text-stone-600">Detalha o contraditório e seus corolários (citação, intimações com prazo razoável, acesso aos autos). <span class="citation" title="Fonte: 201">[cite: 201]</span> Ausência de resposta à intimação não implica confissão (Art. 27, Lei 9.784/99). <span class="citation" title="Fonte: 202, 203">[cite: 202, 203]</span></p>
+                </div>
+                <div class="doutrina-autor bg-white p-4 rounded-lg shadow border border-stone-200">
+                    <h4 class="font-semibold text-sky-600">Maria Sylvia Zanella Di Pietro <span class="citation" title="Fonte: 7">[cite: 7]</span></h4>
+                    <p class="text-sm text-stone-600">Defende formalismo mitigado ("informalismo"). <span class="citation" title="Fonte: 204">[cite: 204]</span> Art. 27 da Lei 9.784/99 afasta preclusão e revelia do processo civil. <span class="citation" title="Fonte: 205">[cite: 205]</span> Interpretação de prazos deve privilegiar o contraditório. <span class="citation" title="Fonte: 206">[cite: 206]</span></p>
+                </div>
+                 <div class="doutrina-autor bg-white p-4 rounded-lg shadow border border-stone-200">
+                    <h4 class="font-semibold text-sky-600">Karine Mendonça Ruschel <span class="citation" title="Fonte: 6">[cite: 6]</span></h4>
+                    <p class="text-sm text-stone-600">Aborda a instrumentalidade das formas e o princípio do prejuízo no PAD. Vícios formais só anulam o ato se houver prejuízo concreto. <span class="citation" title="Fonte: 207">[cite: 207]</span></p>
+                </div>
+                 <div class="doutrina-autor bg-white p-4 rounded-lg shadow border border-stone-200">
+                    <h4 class="font-semibold text-sky-600">José Arimatéa Machado <span class="citation" title="Fonte: 11">[cite: 11]</span></h4>
+                    <p class="text-sm text-stone-600">Critica portarias e citações genéricas que obstaculizam a defesa. Acusação deve ser clara e precisa desde o início. <span class="citation" title="Fonte: 209">[cite: 209]</span></p>
+                </div>
+            </div>
+
+            <div class="mt-8 table-container">
+                <h3 class="text-xl font-semibold text-sky-600 mb-3">Quadro Sinóptico de Argumentos Doutrinários e Jurisprudenciais <span class="citation" title="Fonte: 240">[cite: 240]</span></h3>
+                <table class="min-w-full divide-y divide-stone-200 text-sm">
+                     <thead class="bg-stone-100">
+                        <tr>
+                            <th class="px-4 py-2">Tese/Argumento</th>
+                            <th class="px-4 py-2">Fundamentação Constitucional/Legal</th>
+                            <th class="px-4 py-2">Doutrinadores (Exemplos)</th>
+                            <th class="px-4 py-2">Julgados Relevantes (STF/STJ - Exemplos)</th>
+                        </tr>
+                    </thead>
+                    <tbody class="bg-white divide-y divide-stone-200">
+                        <tr>
+                            <td class="px-4 py-2">Nulidade absoluta por ausência/deficiência grave de intimação/notificação</td>
+                            <td class="px-4 py-2">Art. 5º, LIV, LV, CF/88; Arts. 26, 28, Lei 9.784/99.</td>
+                            <td class="px-4 py-2">Maria Sylvia Z. Di Pietro <span class="citation" title="Fonte: 7">[cite: 7]</span>, José Arimatéa Machado <span class="citation" title="Fonte: 11">[cite: 11]</span>, Carmen S. L. de Arruda <span class="citation" title="Fonte: 15">[cite: 15]</span>.</td>
+                            <td class="px-4 py-2">STF: MS 25.793/DF <span class="citation" title="Fonte: 13">[cite: 13]</span>. TRF5: PJE 08045728220154058400 <span class="citation" title="Fonte: 19">[cite: 19]</span>.</td>
+                        </tr>
+                        <tr>
+                            <td class="px-4 py-2">Necessidade de comprovar prejuízo para anulação (pas de nullité sans grief)</td>
+                            <td class="px-4 py-2">Princípio geral do direito processual.</td>
+                            <td class="px-4 py-2">Karine M. Ruschel <span class="citation" title="Fonte: 6">[cite: 6]</span> (primazia do mérito).</td>
+                            <td class="px-4 py-2">STF: DJE 28/09/2012 <span class="citation" title="Fonte: 1">[cite: 1]</span>. STJ: Jurisprudência consolidada <span class="citation" title="Fonte: 5">[cite: 5]</span>.</td>
+                        </tr>
+                        <tr>
+                            <td class="px-4 py-2">Presunção de prejuízo por prazo legal mínimo exíguo para defesa</td>
+                            <td class="px-4 py-2">Art. 5º, LV, CF/88; Art. 26, §2º, Lei 9.784/99.</td>
+                            <td class="px-4 py-2">Interpretação que visa máxima efetividade da norma garantidora.</td>
+                            <td class="px-4 py-2">STJ: RMS 42.193-ES <span class="citation" title="Fonte: 3">[cite: 3]</span>.</td>
+                        </tr>
+                        <tr>
+                            <td class="px-4 py-2">Rejeição à "nulidade de algibeira"</td>
+                            <td class="px-4 py-2">Princípios da boa-fé processual, lealdade, cooperação.</td>
+                            <td class="px-4 py-2">(Implícito na crítica à litigância de má-fé).</td>
+                            <td class="px-4 py-2">STJ: Ampla jurisprudência <span class="citation" title="Fonte: 5">[cite: 5]</span>.</td>
+                        </tr>
+                        <tr>
+                            <td class="px-4 py-2">Mitigação da preclusão para o administrado (Art. 27, Lei 9.784/99)</td>
+                            <td class="px-4 py-2">Art. 5º, LV, CF/88; Art. 27, Lei 9.784/99.</td>
+                            <td class="px-4 py-2">Maria Sylvia Z. Di Pietro <span class="citation" title="Fonte: 7">[cite: 7]</span>, Thiago Marrara <span class="citation" title="Fonte: 2">[cite: 2]</span>.</td>
+                            <td class="px-4 py-2">(Aplicação direta da lei).</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <section id="tendencias" class="content-section py-12">
+            <h2 class="text-2xl sm:text-3xl font-bold text-sky-700 mb-6">Tendências Atuais, Desafios e Propostas</h2>
+            <p class="text-lg text-stone-700 mb-6">O processo administrativo contemporâneo busca modernização e eficiência, ao mesmo tempo que reforça garantias fundamentais. <span class="citation" title="Fonte: 242">[cite: 242]</span> Esta seção aborda o impacto do processo eletrônico, a inteligência artificial e analisa propostas legislativas recentes, como o PL 2.481/2022, que visa reformar a Lei de Processo Administrativo. <span class="citation" title="Fonte: 243">[cite: 243]</span></p>
+
+            <div class="grid md:grid-cols-2 gap-6">
+                <div class="bg-white p-6 rounded-lg shadow-md border border-stone-200">
+                    <h3 class="text-xl font-semibold text-sky-600 mb-2">Processo Administrativo Eletrônico e IA</h3>
+                    <p class="text-stone-600 text-sm mb-2">Transição impulsionada por celeridade, transparência e redução de custos. <span class="citation" title="Fonte: 244">[cite: 244]</span> Manual PAD CGU já admite comunicação por e-mail/apps. <span class="citation" title="Fonte: 244">[cite: 244]</span></p>
+                    <p class="font-semibold text-sm text-stone-700">Desafios:</p>
+                    <ul class="list-disc list-inside text-sm text-stone-600 space-y-1">
+                        <li>Exclusão Digital: Barreiras para quem não tem acesso/familiaridade com tecnologia. <span class="citation" title="Fonte: 245">[cite: 245]</span></li>
+                        <li>Validade e Segurança: Garantir autenticidade, integridade e definição de ciência. <span class="citation" title="Fonte: 246, 247">[cite: 246, 247]</span></li>
+                        <li>Regulamentação Clara: Necessidade de normas detalhadas para evitar cerceamento. <span class="citation" title="Fonte: 248">[cite: 248]</span></li>
+                        <li>IA: Risco de opacidade e vieses se não houver transparência e auditabilidade. <span class="citation" title="Fonte: 253">[cite: 253]</span></li>
+                    </ul>
+                    <p class="text-xs text-stone-500 mt-2">A tecnologia deve servir como instrumento de inclusão e efetivação de direitos. <span class="citation" title="Fonte: 254, 255">[cite: 254, 255]</span></p>
+                </div>
+
+                <div class="bg-white p-6 rounded-lg shadow-md border border-stone-200">
+                    <h3 class="text-xl font-semibold text-sky-600 mb-2">PL 2.481/2022 (Reforma da Lei 9.784/99) <span class="citation" title="Fonte: 256">[cite: 256]</span></h3>
+                     <p class="text-stone-600 text-sm mb-2">Busca modernizar e conferir maior segurança jurídica. <span class="citation" title="Fonte: 261">[cite: 261]</span></p>
+                    <p class="font-semibold text-sm text-stone-700">Principais Propostas:</p>
+                    <ul class="list-disc list-inside text-sm text-stone-600 space-y-1">
+                        <li>Preferência pelo meio eletrônico e uso de IA (com transparência e controle). <span class="citation" title="Fonte: 256">[cite: 256]</span></li>
+                        <li>Negócio jurídico processual (ajuste de procedimento com o administrado). <span class="citation" title="Fonte: 257">[cite: 257]</span></li>
+                        <li>Prazos de instrução (60 dias prorrogável) e duração total do processo (6 meses após instrução). <span class="citation" title="Fonte: 258">[cite: 258]</span></li>
+                        <li>Contagem de prazos em dias úteis e hipóteses de suspensão. <span class="citation" title="Fonte: 259">[cite: 259]</span></li>
+                        <li>Direito de investigados saberem da tramitação e apresentarem documentos antes da decisão em processo sancionador. <span class="citation" title="Fonte: 260">[cite: 260]</span></li>
+                    </ul>
+                    <p class="text-xs text-stone-500 mt-2">Intenção de codificar entendimentos e enfrentar desafios tecnológicos. <span class="citation" title="Fonte: 264, 265">[cite: 264, 265]</span></p>
+                </div>
+            </div>
+        </section>
+
+        <section id="conclusao" class="content-section py-12">
+            <h2 class="text-2xl sm:text-3xl font-bold text-sky-700 mb-6">Síntese Conclusiva e Perspectivas</h2>
+            <p class="text-lg text-stone-700 mb-6">A correta comunicação dos atos e a observância dos prazos são pilares para o exercício efetivo do contraditório e da ampla defesa, garantias constitucionais essenciais no processo administrativo. <span class="citation" title="Fonte: 268">[cite: 268]</span> Esta seção recapitula os principais entendimentos, discute as implicações e aponta perspectivas para o aprimoramento das práticas processuais.</p>
+
+            <div class="space-y-6">
+                <div class="p-6 bg-white shadow-lg rounded-lg border border-sky-200">
+                    <h3 class="text-xl font-semibold text-sky-600 mb-2">Recapitulação e Implicações</h3>
+                    <p class="text-stone-600 mb-2">Base constitucional (CF/88) e legal (Lei 9.784/99) exigem transparência e participação. <span class="citation" title="Fonte: 269">[cite: 269]</span> Jurisprudência anula procedimentos com falhas graves de comunicação ou prazos exíguos. <span class="citation" title="Fonte: 270">[cite: 270]</span> Valorização da instrumentalidade das formas (<em>pas de nullité sans grief</em>) e rejeição à "nulidade de algibeira". <span class="citation" title="Fonte: 271, 272">[cite: 271, 272]</span></p>
+                    <p class="text-stone-600">Comunicação clara e prazos razoáveis são indispensáveis para uma defesa efetiva, não meramente formal. <span class="citation" title="Fonte: 277, 278">[cite: 277, 278]</span> Garantir esses aspectos fortalece a Administração e reduz litígios. <span class="citation" title="Fonte: 280">[cite: 280]</span></p>
+                </div>
+
+                <div class="p-6 bg-white shadow-lg rounded-lg border border-sky-200">
+                    <h3 class="text-xl font-semibold text-sky-600 mb-2">Perspectivas de Aprimoramento</h3>
+                    <p class="text-stone-600 mb-2">Desenvolver uma <strong>cultura de devido processo legal administrativo</strong>, onde agentes públicos internalizem a importância do contraditório e da ampla defesa. <span class="citation" title="Fonte: 283, 284">[cite: 283, 284]</span></p>
+                    <p class="text-stone-600 mb-2">Harmonizar <strong>eficiência e garantismo</strong>. <span class="citation" title="Fonte: 288">[cite: 288]</span> A celeridade não pode atropelar direitos. <span class="citation" title="Fonte: 289">[cite: 289]</span> Processo eletrônico e IA devem ser implementados com cautela, foco na inclusão e proteção de direitos. <span class="citation" title="Fonte: 291">[cite: 291]</span></p>
+                    <p class="text-stone-600">Capacitação de agentes públicos, clareza das normas e mecanismos eficazes de controle são indispensáveis. <span class="citation" title="Fonte: 295">[cite: 295]</span></p>
+                </div>
+            </div>
+             <div class="mt-8 text-center text-sm text-stone-500">
+                <p>Esta aplicação foi gerada com base no relatório fornecido, visando facilitar a exploração de seu conteúdo.</p>
+            </div>
+        </section>
+
+        </main>
+
+    <footer class="bg-stone-800 text-stone-300 py-8 mt-16 text-center">
+        <p>&copy; 2024 Análise Interativa de Relatório. Todos os direitos reservados (conteúdo do relatório original).</p>
+        <p class="text-xs">Desenvolvido como ferramenta de visualização e exploração de dados.</p>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const navLinks = document.querySelectorAll('nav a[href^="#"]');
+            const mobileMenuButton = document.getElementById('mobileMenuButton');
+            const mobileMenu = document.getElementById('mobileMenu');
+            const mainNav = document.getElementById('mainNav');
+
+            navLinks.forEach(link => {
+                link.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    const targetId = this.getAttribute('href');
+                    const targetElement = document.querySelector(targetId);
+                    if (targetElement) {
+                        const offsetTop = targetElement.offsetTop - mainNav.offsetHeight;
+                        window.scrollTo({
+                            top: offsetTop,
+                            behavior: 'smooth'
+                        });
+                    }
+                    if (mobileMenu.classList.contains('hidden') === false) {
+                        mobileMenu.classList.add('hidden');
+                    }
+                    updateActiveLink(targetId);
+                });
+            });
+
+            if (mobileMenuButton) {
+                mobileMenuButton.addEventListener('click', () => {
+                    mobileMenu.classList.toggle('hidden');
+                });
+            }
+            
+            function updateActiveLink(activeId) {
+                navLinks.forEach(link => {
+                    link.classList.remove('active');
+                    if (link.getAttribute('href') === activeId) {
+                        link.classList.add('active');
+                    }
+                });
+            }
+
+            const sections = document.querySelectorAll('.content-section');
+            const observerOptions = {
+                root: null,
+                rootMargin: `-${mainNav.offsetHeight}px 0px 0px 0px`,
+                threshold: 0.3
+            };
+
+            const sectionObserver = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        updateActiveLink(`#${entry.target.id}`);
+                    }
+                });
+            }, observerOptions);
+
+            sections.forEach(section => {
+                sectionObserver.observe(section);
+            });
+
+
+            function setupTabs(containerId) {
+                const tabContainer = document.getElementById(containerId);
+                if (!tabContainer) return;
+
+                const tabButtons = tabContainer.querySelectorAll('.tab-button');
+                const tabContents = tabContainer.querySelectorAll('.tab-content');
+
+                tabButtons.forEach(button => {
+                    button.addEventListener('click', () => {
+                        const tabId = button.dataset.tab;
+
+                        tabButtons.forEach(btn => btn.classList.remove('active'));
+                        button.classList.add('active');
+
+                        tabContents.forEach(content => {
+                            if (content.id === tabId) {
+                                content.classList.remove('hidden');
+                            } else {
+                                content.classList.add('hidden');
+                            }
+                        });
+                    });
+                });
+            }
+
+            setupTabs('comunicacaoTabsContainer');
+            setupTabs('prazosTabsContainer');
+
+            const tribunalFilter = document.getElementById('tribunalFilter');
+            const jurisprudenciaItens = document.querySelectorAll('#jurisprudenciaItens .jurisprudencia-item');
+
+            if (tribunalFilter) {
+                tribunalFilter.addEventListener('change', function() {
+                    const selectedTribunal = this.value;
+                    jurisprudenciaItens.forEach(item => {
+                        if (selectedTribunal === 'todos' || item.dataset.tribunal === selectedTribunal) {
+                            item.style.display = 'block';
+                        } else {
+                            item.style.display = 'none';
+                        }
+                    });
+                });
+            }
+
+            const citations = document.querySelectorAll('.citation');
+            citations.forEach(citation => {
+                citation.addEventListener('mouseover', (event) => {
+                    const tooltipText = citation.getAttribute('title');
+                    if (tooltipText) {
+                        let tooltip = document.createElement('div');
+                        tooltip.className = 'absolute bg-neutral-800 text-white text-xs rounded py-1 px-2 z-50 shadow-lg';
+                        tooltip.textContent = tooltipText;
+                        document.body.appendChild(tooltip);
+                        
+                        const rect = citation.getBoundingClientRect();
+                        tooltip.style.left = `${event.pageX + 10}px`;
+                        tooltip.style.top = `${event.pageY + 10}px`;
+                        
+                        citation.addEventListener('mouseout', () => {
+                            tooltip.remove();
+                        }, { once: true });
+                         citation.addEventListener('mousemove', (e) => {
+                            tooltip.style.left = `${e.pageX + 10}px`;
+                            tooltip.style.top = `${e.pageY + 10}px`;
+                        });
+                    }
+                });
+            });
+
+        });
+
+        // Exemplo de como adicionar um gráfico Chart.js se necessário
+        // const ctx = document.getElementById('mySampleChart');
+        // if (ctx) {
+        //   new Chart(ctx, {
+        //     type: 'bar',
+        //     data: {
+        //       labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
+        //       datasets: [{
+        //         label: '# of Votes',
+        //         data: [12, 19, 3, 5, 2, 3],
+        //         borderWidth: 1
+        //       }]
+        //     },
+        //     options: {
+        //       maintainAspectRatio: false,
+        //       scales: {
+        //         y: {
+        //           beginAtZero: true
+        //         }
+        //       },
+        //       plugins: {
+        //          tooltip: {
+        //             callbacks: {
+        //                 label: function(context) {
+        //                     let label = context.dataset.label || '';
+        //                     if (label) {
+        //                         label += ': ';
+        //                     }
+        //                     if (context.parsed.y !== null) {
+        //                         label += new Intl.NumberFormat('pt-BR').format(context.parsed.y);
+        //                     }
+        //                     return label;
+        //                 }
+        //             }
+        //         },
+        //         legend: {
+        //             labels: {
+        //                 // This more generic approach attempts to wrap text at a reasonable length.
+        //                 // For Chart.js v3+, you might need a plugin or more complex formatter for advanced wrapping.
+        //                 generateLabels: function(chart) {
+        //                     const original = Chart.defaults.plugins.legend.labels.generateLabels;
+        //                     const labels = original.call(this, chart);
+        //                     labels.forEach(label => {
+        //                         if (label.text.length > 16) {
+        //                             // Basic split logic, might need refinement
+        //                             const words = label.text.split(' ');
+        //                             let newLineText = '';
+        //                             let currentLine = '';
+        //                             words.forEach(word => {
+        //                                 if ((currentLine + word).length > 16) {
+        //                                     newLineText += currentLine.trim() + '\n';
+        //                                     currentLine = word + ' ';
+        //                                 } else {
+        //                                     currentLine += word + ' ';
+        //                                 }
+        //                             });
+        //                             label.text = newLineText + currentLine.trim();
+        //                         }
+        //                     });
+        //                     return labels;
+        //                 }
+        //             }
+        //         }
+        //       }
+        //     }
+        //   });
+        // }
+    </script>
+</body>
+</html>
